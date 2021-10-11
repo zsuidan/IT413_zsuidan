@@ -5,9 +5,10 @@ h1, h3
     color:green;
 }
 
-image
+#sloth_image
 {
-    size: 50%;
+    height:175px;
+    width:175px;
 }
 
 p
@@ -15,6 +16,12 @@ p
     text-indent: 5%;
     font-family: Arial, Helvetica, sans-serif;
     word-spacing: 5pt;
+}
+
+strong
+{
+    font-style: italic;
+    text-transform: uppercase;
 }
 
 table, td, th
