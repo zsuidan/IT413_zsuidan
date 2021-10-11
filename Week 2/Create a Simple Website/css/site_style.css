@@ -1,0 +1,24 @@
+h1, h3
+{
+    text-decoration: underline;
+    text-align: center;
+    color:green;
+}
+
+image
+{
+    size: 50%;
+}
+
+p
+{
+    text-indent: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 5pt;
+}
+
+table, td, th
+{
+    border: 2px dashed gray;
+    border-collapse: collapse;
+}

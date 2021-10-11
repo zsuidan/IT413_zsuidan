@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta name="keywords" content="contact us">
+        <link rel="stylesheet" type="text/css" href="css/site_style.css">
+    </head>
+
+    <body>
+        <h1>Contact Us</h1>
+        <h3><a href="index.html">Home</a><a href="aboutus.html">About Us</a><a href="contactus.html">Contact Us</a><a href="products.html">Products</a><a href="directory.html">Company Directory</a></h3>
+
+        <form action="formprocesser.php" method="post">
+            First name:<br>
+            <input type="text" name="firstname"><br>
+            Last name:<br>
+            <input type="text" name="lastname"><br>
+            Address<br>
+            <input type="text" name="address"><br>
+            Phone Number<br>
+            <input type="text" name="phone"><br>
+            Inquiry<br>
+            <textarea name="text_to_submit" rows="4" cols="50">Enter your inquiry here</textarea>
+
+            <input type="submit" value="Submit Form ">
+        </form>
+
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Position</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+
+            <tr>
+                <td>Renee</td>
+                <td>Dieviss</td>
+                <td>rdieviss</td>
+                <td>President</td>
+                <td>rdieviss@test.com</td>
+                <td>248-555-1212</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+p 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+h1
+{
+    color:navy;
+    text-decoration: underline;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+table, td, th
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#sloth_image
+{
+    height:700px;
+    width:700px;
+}
+
+a:link
+{
+    color:blue;
+}
+
+a:visited
+{
+    color:grey;
+}
+
+a:active
+{
+    color:blue;
+}
+
+a:hover
+{
+    color:blue;
+    text-decoration: none;
+}
+
+.my_paragraph_class
+{
+        color:red;
+}
+
+.number_style
+{
+    font-weight: bold;
+    color:purple;
+}
+
+#my_header
+{
+    position: absolute;
+    right:200px;
+}
