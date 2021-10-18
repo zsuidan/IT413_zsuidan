@@ -18,3 +18,4 @@ $(document).ready(function() {
         $(".normal").css("color", "purple");
         $(".normal").css("font-family", "Arial");
     })
+})
