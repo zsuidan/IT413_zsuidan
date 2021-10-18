@@ -18,18 +18,3 @@ $(document).ready(function() {
         $(".normal").css("color", "purple");
         $(".normal").css("font-family", "Arial");
     })
-});
-
-function validateForm()
-{
-    var first_name_value = $("#first_name").val();
-
-    if(first_name_value != "")
-    {
-        return true
-    }
-    else
-    {
-        alert("The First Name Field Cannot be Empty")
-    }
-}
