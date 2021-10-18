@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta name="keywords" content="contact us">
+        <link rel="stylesheet" type="text/css" href="css/site_style.css">
+        <script language="JavaScript" src="js/form_validate.js"></script>
+    </head>
+
+    <body>
+        <h1>Contact Us</h1>
+        
+        <h3>
+            <a href="index.html" >Home</a><a href="aboutus.html" style="margin-left: 30px">About Us</a><a href="contactus.html" style="margin-left: 30px">Contact Us</a>
+            <a href="products.html" style="margin-left: 30px">Products</a><a href="directory.html" style="margin-left: 30px">Company Directory</a>
+        </h3>
+
+        <form name="contact_form" method="post" onsubmit="return validateForm();">
+            First name:<br>
+            <input type="text" name="first_name"><br>
+            Last name:<br>
+            <input type="text" name="last_name"><br>
+            Address<br>
+            <input type="text" name="address"><br>
+            Phone Number<br>
+            <input type="text" name="phone"><br>
+            Inquiry<br>
+            <textarea name="text_to_submit" rows="4" cols="50">Enter your inquiry here</textarea>
+
+            <input type="submit" value="Submit Form ">
+        </form>
+    </body>
+</html>
