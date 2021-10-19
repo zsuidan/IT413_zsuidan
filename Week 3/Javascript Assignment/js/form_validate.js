@@ -42,10 +42,10 @@ function validateForm()
             return_value = false;
         }
 
-        if(document.forms["contact_form"].phone.value != "" && (document.forms["contact_form"].phone.value.length < 10 
-            || document.forms["contact_form"].phone.value.length > 12))
+        if(document.forms["contact_form"].phone.value != "" && document.forms["contact_form"].phone.value.length != 10 
+            && document.forms["contact_form"].phone.value.length != 12)
         {
-            error_string += "Phone Number value must be 10-12 characters long.\n";
+            error_string += "Phone Number value must be either 10 or 12 characters long.\n";
             return_value = false;
         }
 
