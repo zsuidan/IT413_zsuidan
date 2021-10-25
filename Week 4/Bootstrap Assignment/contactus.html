@@ -44,43 +44,63 @@
         </nav>
 
         <h1>Contact Us</h1>
-        
-        <h3>
-            <a href="index.html" >Home</a><a href="aboutus.html" style="margin-left: 30px">About Us</a><a href="contactus.html" style="margin-left: 30px">Contact Us</a>
-            <a href="products.html" style="margin-left: 30px">Products</a><a href="directory.html" style="margin-left: 30px">Company Directory</a>
-        </h3>
 
-        <form name="contact_form" method="post" onsubmit="return validateForm();">
-            <div class="mb-3">
-              <label for="first_name" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="first_name" aria-describedby="first_name_help">
-              <div id="first_name_help" class="form-text">3-10 characters</div>
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationCustomFirstName">First name</label>
+                <input type="text" class="form-control" id="validationCustomFirstName" placeholder="First name" pattern=".{3,10}" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a first name between 3-10 characters
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationCustomLastName">Last name</label>
+                <input type="text" class="form-control" id="validationCustomLastName" placeholder="Last name" pattern=".{2,15}" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a last name between 2-15 characters
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationCustomAddress">Address (optional)</label>
+                <input type="text" class="form-control" id="validationCustomAddress" placeholder="Address" pattern=".{8,25}">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter an address between 8-25 characters
+                </div>
+              </div>
             </div>
-
-            <div class="mb-3">
-                <label for="last_name" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="last_name" aria-describedby="last_name_help">
-                <div id="last_name_help" class="form-text">2-15 characters</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="address" aria-describedby="address_help">
-                <div id="address_help" class="form-text">8-25 characters</div>
-            </div>
-
-            <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="text" class="form-control" id="phone" aria-describedby="phone_help">
-                <div id="phone_help" class="form-text">10 or 12 characters</div>
-            </div>
-
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Enter your inquiry here" id="inquiry" style="height: 150px"></textarea>
-                <label for="floatingTextarea">Inquiry</label>
-            </div>
-    
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustomPhoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="validationCustomPhoneNumber" placeholder="Phone Number" pattern=".{10}|.{12}" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a phone number with either 10 or 12 characters
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationTextarea" class="form-label">Inquiry</label>
+                    <textarea class="form-control" id="validationTextarea" placeholder="Enter your inquiry" required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter your inquiry
+                    </div>
+                </div>
+              
+            <button class="btn btn-primary btn-sm" type="submit">Submit inquiry</button>
         </form>
         
         <!-- Optional JavaScript; choose one of the two! -->
