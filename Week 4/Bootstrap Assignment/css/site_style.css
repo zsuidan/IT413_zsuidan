@@ -1,30 +1,23 @@
 h1, h3
 {
+    margin-left: 20px;
     text-decoration: underline;
-    text-align: center;
-    color:blue;
-}
-
-#sloth_image
-{
-    height:175px;
-    width:175px;
-}
-
-#sloth_image2
-{
-    height:250px;
-    width:375px;
 }
 
 p
 {
-    text-indent: 5%;
-    font-family: Arial;
+    text-indent: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-table, td, th
+.row 
 {
-    border: 2px dashed gray;
-    border-collapse: collapse;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+form
+{
+    margin-left: 20px;
+    margin-right: 20px;
 }
