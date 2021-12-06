@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+        <!--Login State Start-->
+        <div id="login_state">
+            <h1>Login</h1>
+            <form id="login_form">
+                
+                <label for="login_username">Username: </label><br>
+                <input type="text" name="login_username" id="login_username" value=""><br><br>
+                
+                <label for="login_password">Password: </label><br>
+                <input type="text" name="login_password" id="login_password" value=""><br><br>
+                   
+
+                <button id="login_button">Login</button>
+            </form>
+
+            <button id="login_fb">Login with Facebook</button>
+        </div>
+        <!--Login State End-->
+
+        <!--Select Project State Start-->
+        <div id="select_project_state">
+            <h1>Select a Project</h1>
+            <form id="project_select">
+                <!--<label for="project_selector">Select a Project</label><br>-->
+                <select name="project_selector" id="project_selector"></select>
+            </form>
+        
+            <button id="view_tasks_button">View Tasks</button>
+            <button id="project_logout_button">Logout</button>
+        </div>
+        <!--Select Project State End-->
+
+        <!--View Tasks State Start-->
+        <div id="view_task_state">
+            <h1>Project Tasks</h1>
+            <table id="task_list">
+                
+            </table>
+
+            <button id="add_task_button">Add Task</button>
+            <button id="edit_task_button">Edit Task</button>
+            <button id="back_to_select_button">Select Another Project</button>
+            <button id="task_logout_button">Logout</button>
+        </div>
+        <!--View/Edit Tasks State End-->
+
+        <!--Add Task State Start-->
+        <div id="add_task_state">
+            <br><h3>Add Task</h3><br>
+            <label for="task_description">Task Description</label><br>
+            <textarea name="new_task_description" id="new_task_description" cols="50" rows="3"></textarea><br>
+            <label for="task_status">Task Status</label><br>
+            <select name="new_task_status" id="new_task_status">
+                <option value="Unassigned">Unassigned</option>
+                <option value="In Process">In Process</option>
+                <option value="Resolved">Resolved</option>
+            </select><br>
+
+            <button id="save_new_task_button">Save</button>
+            
+        </div>
+        <!--Add Task State End-->
+
+        <!--Edit Task State Start-->
+        <div id="edit_task_state">
+            <br><h3>Edit Task</h3><br>
+            <select name="task_selector" id="task_selector"></select><br>
+            <label for="edited_task_description">Task Description</label><br>
+            <textarea name="edited_task_description" id="edited_task_description" cols="50" rows="3"></textarea><br>
+            <label for="edited_task_status">Task Status</label><br>
+            <select name="edited_task_status" id="edited_task_status">
+                <option value="Unassigned">Unassigned</option>
+                <option value="In Process">In Process</option>
+                <option value="Resolved">Resolved</option>
+            </select><br>
+                
+            <button id="save_edited_task_button">Save</button>
+        </div>
+        <!--Edit Task State End-->
+
+
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.structure.min.css">
+        <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.theme.min.css">
+        <script src="jqueryui/jquery-ui.min.js"></script>
+        <script src="js/application.js"></script>
+    </body>
+</html>

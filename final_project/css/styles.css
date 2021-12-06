@@ -1,0 +1,63 @@
+#add_task_state
+{
+    display: none;
+    margin: auto;
+    width: 60%;
+}
+
+#edit_task_state
+{
+    display: none;
+    margin: auto;
+    width: 60%;
+}
+
+#login_state
+{
+    /* display: none; */
+    margin: auto;
+    width: 60%;
+}
+
+#select_project_state
+{
+    display: none;
+    margin: auto;
+    width: 60%;
+}
+
+#view_task_state
+{
+    display: none;
+    margin: auto;
+    width: 60%;
+}
+
+div
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+table, th, td 
+{
+    border: 1px solid white;
+}
+
+td
+{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+body
+{
+    background-color:black;
+    color: white;
+}
+
+button, select, input, label
+{
+    margin-top: 10px;
+}
