@@ -13,6 +13,29 @@ $(document).ready(function() {
         });
     });
 
+    //Add task click function
+    $("#add_task_button").click(function(){
+
+        $("#edit_task_state").hide();
+        $("#add_task_state").toggle("fade");
+    })
+
+    //Back to select click function
+    $("#back_to_select_button").click(function(){
+
+        $("#select_project_state").toggle("fade");
+        $("#view_task_state").hide();
+        $("#add_task_state").hide();
+        $("#edit_task_state").hide();
+    })
+
+    //Edit task click function
+    $("#edit_task_button").click(function(){
+
+        $("#edit_task_state").toggle("fade");
+        $("#add_task_state").hide();
+    })
+
     //Login button click function
     $("#login_button").click(function() {
 
@@ -35,7 +58,7 @@ $(document).ready(function() {
             statusChangeCallback(response);
         })
 
-        $("#login_state").show();
+        $("#login_state").toggle("fade");
         $("#select_project_state").hide();
         $("#view_task_state").hide();
         $("#add_task_state").hide();
@@ -48,7 +71,7 @@ $(document).ready(function() {
             statusChangeCallback(response);
         })
 
-        $("#login_state").show();
+        $("#login_state").toggle("fade");
         $("#select_project_state").hide();
         $("#view_task_state").hide();
         $("#add_task_state").hide();
@@ -60,30 +83,7 @@ $(document).ready(function() {
 
         getTasks();
         $("#select_project_state").hide();
-        $("#view_task_state").show();
-    })
-
-    //Back to select click function
-    $("#back_to_select_button").click(function(){
-
-        $("#select_project_state").show();
-        $("#view_task_state").hide();
-        $("#add_task_state").hide();
-        $("#edit_task_state").hide();
-    })
-
-    //Add task click function
-    $("#add_task_button").click(function(){
-
-        $("#add_task_state").show();
-        $("#edit_task_state").hide();
-    })
-
-    //Edit task click function
-    $("#edit_task_button").click(function(){
-
-        $("#edit_task_state").show();
-        $("#add_task_state").hide();
+        $("#view_task_state").toggle("fade");
     })
 
 });
@@ -110,6 +110,7 @@ function getProjects()
     }, "json").fail(function(){alert("Web Service Call Failed");});
 }
 //End getProjects function
+
 
 //Begin getTasks function
 function getTasks()
@@ -141,31 +142,6 @@ function getTasks()
 }
 //End getTasks function
 
-//Begin validateUser function
-function validateUser()
-{
-    var retriever_command = "validate_user";
-    var entered_user = $("#login_username").val();
-    var entered_password = $("#login_password").val();
-
-    $.post('dataretriever.php', {command: retriever_command, submitted_user: entered_user, submitted_password: entered_password}, function(data) {
-
-        if(data)
-        {
-            $("#login_state").hide();
-
-            //Obtains project information from database for select_project_state
-            getProjects();
-            $("#select_project_state").show();
-        }
-        else
-        {
-            $("#login_form").effect( "shake", "slow" );
-        }
-
-    });
-}
-//End validateUser function
 
 function statusChangeCallback(response)
 {
@@ -182,3 +158,29 @@ function statusChangeCallback(response)
 
     console.log(response)
 }
+
+//Begin validateUser function
+function validateUser()
+{
+    var retriever_command = "validate_user";
+    var entered_user = $("#login_username").val();
+    var entered_password = $("#login_password").val();
+
+    $.post('dataretriever.php', {command: retriever_command, submitted_user: entered_user, submitted_password: entered_password}, function(data) {
+
+        if(data)
+        {
+            $("#login_state").hide();
+
+            //Obtains project information from database for select_project_state
+            getProjects();
+            $("#select_project_state").toggle("fade");
+        }
+        else
+        {
+            $("#login_form").effect( "shake", "slow" );
+        }
+
+    });
+}
+//End validateUser function

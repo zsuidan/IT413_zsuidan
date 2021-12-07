@@ -121,6 +121,19 @@ function numOK($passed_num)
 	}
 }
 
+//Verifies that the posted password is valid
+function passOK($passed_password)
+{
+	if(ctype_alnum($passed_password))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 //Verifies that the posted username is valid
 function userOK($passed_user)
 {
@@ -134,17 +147,5 @@ function userOK($passed_user)
 	}
 }
 
-//Verifies that the posted password is valid
-function passOK($passed_password)
-{
-	if(ctype_alnum($passed_password))
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
 
 ?>

@@ -5,6 +5,23 @@
     width: 60%;
 }
 
+body
+{
+    background-color:#222222;
+    color: white;
+}
+
+button, select, input, label
+{
+    margin-top: 10px;
+}
+
+div
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 #edit_task_state
 {
     display: none;
@@ -26,19 +43,6 @@
     width: 60%;
 }
 
-#view_task_state
-{
-    display: none;
-    margin: auto;
-    width: 60%;
-}
-
-div
-{
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 table, th, td 
 {
     border: 1px solid white;
@@ -51,13 +55,9 @@ td
     padding-right: 10px;
 }
 
-body
+#view_task_state
 {
-    background-color:black;
-    color: white;
-}
-
-button, select, input, label
-{
-    margin-top: 10px;
+    display: none;
+    margin: auto;
+    width: 60%;
 }
