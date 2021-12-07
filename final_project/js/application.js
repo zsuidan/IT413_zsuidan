@@ -93,6 +93,7 @@ $(document).ready(function() {
 //Begin getProjects function
 function getProjects()
 {
+    //Calls the get_projects function from dataretriever.php and fills project_selector with the entries in the database 
     var retriever_command = "get_projects";
 
     $.post('dataretriever.php', {command: retriever_command}, function(data) {
@@ -115,15 +116,20 @@ function getProjects()
 //Begin getTasks function
 function getTasks()
 {
+    //Calls the get_tasks function using the value of the project_selector to determine what project needs to have its tasks shown
     var retriever_command = "get_tasks";
     var proj_num = $("#project_selector").val();
 
     $.post('dataretriever.php', {command: retriever_command, project_number: proj_num}, function(data) {
 
+        //Clears task_list and task_selector to get rid of any previously added tasks
         $("#task_list").empty();
         $("#task_selector").empty();
+
+        //Sets up task_list table headers
         $("#task_list").append("<tr><td>Task ID</td><td>Task Description</td><td>Task Status</td></tr>");
         
+        //Goes through list of tasks for selected project and adds them to the task_list and task_selector 
         var count = 0;
 
         while(count < data.list_of_tasks.length)
@@ -142,7 +148,7 @@ function getTasks()
 }
 //End getTasks function
 
-
+//Begin statusChangeCallback function
 function statusChangeCallback(response)
 {
     if(response.status === "connected")
@@ -158,24 +164,30 @@ function statusChangeCallback(response)
 
     console.log(response)
 }
+//End statusChangeCallback function
 
 //Begin validateUser function
 function validateUser()
 {
+    //Calls the validate_user function from dataretriever.php using the username and password values entered by the user
     var retriever_command = "validate_user";
     var entered_user = $("#login_username").val();
     var entered_password = $("#login_password").val();
 
     $.post('dataretriever.php', {command: retriever_command, submitted_user: entered_user, submitted_password: entered_password}, function(data) {
 
+        //If verification was successful, obtains projects for project_selector and shows select_project_state
         if(data)
         {
             $("#login_state").hide();
 
             //Obtains project information from database for select_project_state
             getProjects();
+
             $("#select_project_state").toggle("fade");
         }
+
+        //If verification was unsuccessful, performs a shake effect on the login form
         else
         {
             $("#login_form").effect( "shake", "slow" );

@@ -77,9 +77,12 @@ if($function=="get_tasks")
 if($function=="validate_user")
 {
 		$valid_user = false;
+
+		//collects data needed for verification
 		$submitted_user = trim($_POST["submitted_user"]);
 		$submitted_password = trim($_POST["submitted_password"]);
 
+		//verifies the data was formatted correctly
 		if(userOK($submitted_user) && passOK($submitted_password))
 		{
 			//the query to get the list of available users
@@ -88,21 +91,24 @@ if($function=="validate_user")
 			//do the query
 			$db->query($query);
 
+			//check the username and password combinations to ensure the user credentials are correct
 			while($db->next_record())
 			{
-				//obtain the password for the given user
 				$user_name=$db->f("username");
 				$user_password=$db->f("password");
 
+				//if the entered credentials match, sets $valid_user to true
 				if($submitted_user == $user_name && $submitted_password == $user_password)
 				{
 					$valid_user = true;
+					break;
 				}
 
 			}
 		
 		}
 
+		//returns true/false depending on if credentials matched database values
 		echo($valid_user);
 
 }//end if we need to validate a user
